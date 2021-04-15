@@ -79,8 +79,8 @@ _addon.Feature.Toolbar.GetCurrency = function(currencyType, currencyLocation, ic
 	if currencyType == CURT_CHAOTIC_CREATIA then
 		local xmuteMode = _addon:GetOrDefault( true, _addon.Settings["xmute_mode"])
 		local xmuteWarn = tonumber(_addon:GetOrDefault( 25, _addon.Settings["xmute_warn"]))
-		local xmuteMax = 100
-		if IsESOPlusSubscriber() then xmuteMax = 200 end
+		local xmuteMax = 500
+		if IsESOPlusSubscriber() then xmuteMax = 1000 end
 		c = _addon.Feature.Toolbar.ThresholdColor(val, xmuteMax - xmuteWarn, xmuteMax)
 		if xmuteMode == "Available / Max" then retVal = retVal .. "|cDFDDDE".." / " .. xmuteMax.."|r" end
 	end
