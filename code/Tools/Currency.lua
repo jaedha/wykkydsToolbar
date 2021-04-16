@@ -44,6 +44,10 @@ _addon.Feature.Toolbar.GetWrits = function()
 	return _addon.Feature.Toolbar.GetCurrency(CURT_WRIT_VOUCHERS, location, "/esoui/art/currency/currency_writvoucher.dds", "Writs", _addon.G.BAR_TOOL_WRITS)
 end
 
+_addon.Feature.Toolbar.GetUndauntedKeys = function()
+	return _addon.Feature.Toolbar.GetCurrency(CURT_UNDAUNTED_KEYS, CURRENCY_LOCATION_ACCOUNT, "/esoui/art/icons/quest_key_002.dds", "Undaunted Keys", _addon.G.BAR_TOOL_UNDAUNTED_KEYS)
+end
+
 _addon.Feature.Toolbar.CurrencyLocation = function(stringLocation)
 	if stringLocation == "Account" then return CURRENCY_LOCATION_ACCOUNT end
 	if stringLocation == "Bank" then return CURRENCY_LOCATION_BANK end

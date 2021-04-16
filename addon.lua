@@ -11,7 +11,7 @@ _addon._v = {}
 _addon._v.major		= 3
 _addon._v.monthly 	= 2
 _addon._v.daily 	= 7
-_addon._v.minor 	= 0
+_addon._v.minor 	= 2
 _addon.Version 	= _addon._v.major
 	..".".._addon._v.monthly
 	..".".._addon._v.daily
@@ -66,6 +66,7 @@ _addon.wykkydPreferred = {
 	["white_text"] = false,
 	["spacer_style"] = "Dot",
 	["hide_in_dialog"] = true,
+--	["undaunted_keys_setting"] = true,
 }
 
 _addon.Feature = {}
@@ -149,14 +150,15 @@ _addon.LoadSavedVariables = function( self )
 	setDefault( "rt_timer_type", _addon.G.BAR_STR_TIME_TO_NEXT_FREE )
 	setDefault( "rt_slots", _addon.G.BAR_STR_OFF )
 	setDefault( "timerGroup", true )
+	setDefault( "undaunted_keys_mode", "On" )
 end
 
 _addon.LoadSettingsMenu = function( self )
 	local panelData = {
 		type = "panel",
 		name = _addon.DisplayName,
-		displayName = "|cFF2222".._addon.DisplayName.."|r",
-		author = "|c4EFFF6Calia1120|r, |cFF2222Demiknight|r",
+		displayName = _addon.DisplayName,
+		author = "Calia1120, Demiknight, jaedha",
 		version = self.Version,
 		registerForRefresh = true,
 		registerForDefaults = true,
@@ -260,7 +262,9 @@ _addon.LoadSettingsMenu = function( self )
 				[23] = self:MakeStandardOption( self.Settings, "Free Spots Left Warning", "xmute_warn", 25, "slider", { min=0, max=100, step=5, default=25, } ),
 				[24] = self:MakeStandardOption( self.Settings, "Writ Vouchers", nil, nil, "header", nil ),
 				[25] = self:MakeStandardOption( self.Settings, "Display Mode", "writs_mode", "On", "dropdown", { choices={"On","Off"},default="On", } ),
-				[26] = self:MakeStandardOption( self.Settings, "Location", "writs_location", "Character", "dropdown", { choices={"Account","Bank","Character"},default="Character", } ),				
+				[26] = self:MakeStandardOption( self.Settings, "Location", "writs_location", "Character", "dropdown", { choices={"Account","Bank","Character"},default="Character", } ),
+				[27] = self:MakeStandardOption( self.Settings, "Undaunted Keys", nil, nil, "header", nil ),
+				[28] = self:MakeStandardOption( self.Settings, "Display Mode", "undaunted_keys_mode", "On", "dropdown", { choices = {"On", "Off"}, default = "On", } ),
 			},
 		},
 		[18] = { type = "submenu", name = "|cCAB222".."Repair Cost / Weapon Charge".."|r",

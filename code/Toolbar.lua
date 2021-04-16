@@ -421,10 +421,11 @@ _addon.Feature.Toolbar.Create = function()
 	table.insert(_addon.G.BAR_TOOLS, { Tool = _addon.G.BAR_TOOL_EVENT_TICKETS, 	Method = _addon.Feature.Toolbar.GetEventTickets })
 	table.insert(_addon.G.BAR_TOOLS, { Tool = _addon.G.BAR_TOOL_GOLD, 	Method = _addon.Feature.Toolbar.GetMoney })
 	table.insert(_addon.G.BAR_TOOLS, { Tool = _addon.G.BAR_TOOL_GEMS, 	Method = _addon.Feature.Toolbar.GetSoulGems })
-	table.insert(_addon.G.BAR_TOOLS, { Tool = _addon.G.BAR_TOOL_TELVAR, 	Method = _addon.Feature.Toolbar.GetTelVar })	
+	table.insert(_addon.G.BAR_TOOLS, { Tool = _addon.G.BAR_TOOL_TELVAR, 	Method = _addon.Feature.Toolbar.GetTelVar })
 	table.insert(_addon.G.BAR_TOOLS, { Tool = _addon.G.BAR_TOOL_XMUTE, 	Method = _addon.Feature.Toolbar.GetXMute })
 	table.insert(_addon.G.BAR_TOOLS, { Tool = _addon.G.BAR_TOOL_WRITS, 	Method = _addon.Feature.Toolbar.GetWrits })
-	
+	table.insert(_addon.G.BAR_TOOLS, { Tool = _addon.G.BAR_TOOL_UNDAUNTED_KEYS, Method = _addon.Feature.Toolbar.GetUndauntedKeys })
+
 	table.insert(_addon.G.BAR_TOOLS, { Tool = _addon.G.BAR_DURABILITY, 	Method = _addon.Feature.Toolbar.GetDurability })
 	table.insert(_addon.G.BAR_TOOLS, { Tool = _addon.G.BAR_WEAPONCHARGE,Method = _addon.Feature.Toolbar.GetWeaponCharge })
 	if groupTimers then
@@ -505,7 +506,8 @@ _addon.Feature.Toolbar.Create = function()
 		[_addon.G.BAR_TOOL_WRITS] = { Name = "writs_mode", Control = nil },
 		[_addon.G.BAR_TOOL_XMUTE] = { Name = "xmute_setting", Control = nil },
 		[_addon.G.BAR_TOOL_EVENT_TICKETS] = { Name = "eventtickets_setting", Control = nil },
-		[_addon.G.BAR_TOOL_TELVAR] = { Name = "telvar_mode", Control = nil },		
+		[_addon.G.BAR_TOOL_TELVAR] = { Name = "telvar_mode", Control = nil },
+		[_addon.G.BAR_TOOL_UNDAUNTED_KEYS] = { Name = "undaunted_keys_mode", Control = nil },
 		[_addon.G.BAR_TOOL_AP] = { Name = "ap_setting", Control = nil },
 		[_addon.G.BAR_TOOL_CROWNS] = { Name = "crowns_setting", Control = nil },		
 		[_addon.G.BAR_TOOL_CROWN_GEMS] = { Name = "crowngems_mode", Control = nil },		

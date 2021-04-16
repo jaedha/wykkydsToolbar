@@ -1,1 +1,60 @@
-## Title: Wykkyd Toolbar## Description: Provides an on-screen display of useful, configurable information## Author: Calia1120, Demiknight, jaedha## Version: 3.2.7.1## APIVersion: 100031## DependsOn: LibAddonMenu-2.0 LibStub## OptionalDependsOn: wykkyd_core_libraries LibWykkydFactory4## SavedVariables: wykkydsToolbarGlobale/LWF/LibWykkydFactory4.luaaddon.luacode/globals.luacode/tools/bags.luacode/tools/craft.luacode/tools/currency.luacode/tools/fps.luacode/tools/horse.luacode/tools/soulgems.luacode/tools/specialworldxpbar.luacode/tools/time.luacode/tools/unitinfo.luacode/tools/xp.luacode/tools/xpbar.luacode/tools/zone.luacode/tools/durability.luacode/tools/weaponcharge.luacode/toolbar.luabindings.xml; DISCLOSURE:; This Add-on is not created by, affiliated with or sponsored by ZeniMax Media Inc. or its affiliates. ; The Elder Scrolls® and related logos are registered trademarks or trademarks of ZeniMax Media Inc. ; in the United States and/or other countries. All rights reserved. You can read the full terms at ; https://account.elderscrollsonline.com/add-on-terms; AUTHOR NOTE:; Zenimax does not properly support Addon development nor do they properly document, or advertise, ; their API changes and patches. We can only work with the tools that we are given. If something breaks ; it is likely due to something ZOS did that we need to adjust the code in response to. Give us time ; and we'll do it. We apologize for the inconvenience but ultimately it's out of our hands.; We develop these addons in our free time, and because we enjoy it. We have full time day jobs, families,  ; kids and pets. We do not create addons for the purpose of being paid. However, tossing us a few bones  ; eases the stress and frustration after endless hours of "code grinding" because it adds to that feeling of ; work "paying off". It also helps to say we make money on this when our significant others ask why we spend; so much of our free time doing it!; If you like what you see and want more of it, feel free to donate. Lack of donations will certainly ; not stop us from doing what we do. However, a flood of donations would certainly shift priorities; ; the choice is yours. Our primary hope is that you enjoy our work as much as we do.; Follow on Twitter @: @Calia_Gaming or catch up on Discord ->https://discord.gg/qGwxcMa; Please post bug reports and feature requests on ESOUI on the comments TAB for this Add-On or ; join the Discord server - https://discord.gg/qGwxcMa; Thanks!;	 Calia
+## Title: Wykkyd Toolbar
+## Description: Provides an on-screen display of useful, configurable information
+## Author: Calia1120, Demiknight, jaedha
+## Version: 3.2.7.2
+## APIVersion: 100034
+## DependsOn: LibAddonMenu-2.0 LibStub
+## OptionalDependsOn: wykkyd_core_libraries LibWykkydFactory4
+## SavedVariables: wykkydsToolbarGlobal
+
+e/LWF/LibWykkydFactory4.lua
+
+addon.lua
+code/globals.lua
+code/tools/bags.lua
+code/tools/craft.lua
+code/tools/currency.lua
+code/tools/fps.lua
+code/tools/horse.lua
+code/tools/soulgems.lua
+code/tools/specialworldxpbar.lua
+code/tools/time.lua
+code/tools/unitinfo.lua
+code/tools/xp.lua
+code/tools/xpbar.lua
+code/tools/zone.lua
+code/tools/durability.lua
+code/tools/weaponcharge.lua
+code/toolbar.lua
+
+bindings.xml
+
+; DISCLOSURE:
+; This Add-on is not created by, affiliated with or sponsored by ZeniMax Media Inc. or its affiliates. 
+; The Elder Scrolls® and related logos are registered trademarks or trademarks of ZeniMax Media Inc. 
+; in the United States and/or other countries. All rights reserved. You can read the full terms at 
+; https://account.elderscrollsonline.com/add-on-terms
+
+; AUTHOR NOTE:
+; Zenimax does not properly support Addon development nor do they properly document, or advertise, 
+; their API changes and patches. We can only work with the tools that we are given. If something breaks 
+; it is likely due to something ZOS did that we need to adjust the code in response to. Give us time 
+; and we'll do it. We apologize for the inconvenience but ultimately it's out of our hands.
+
+; We develop these addons in our free time, and because we enjoy it. We have full time day jobs, families,  
+; kids and pets. We do not create addons for the purpose of being paid. However, tossing us a few bones  
+; eases the stress and frustration after endless hours of "code grinding" because it adds to that feeling of 
+; work "paying off". It also helps to say we make money on this when our significant others ask why we spend
+; so much of our free time doing it!
+
+; If you like what you see and want more of it, feel free to donate. Lack of donations will certainly 
+; not stop us from doing what we do. However, a flood of donations would certainly shift priorities; 
+; the choice is yours. Our primary hope is that you enjoy our work as much as we do.
+
+; Follow on Twitter @: @Calia_Gaming or catch up on Discord ->https://discord.gg/qGwxcMa
+
+; Please post bug reports and feature requests on ESOUI on the comments TAB for this Add-On or 
+; join the Discord server - https://discord.gg/qGwxcMa
+
+; Thanks!
+;	 Calia

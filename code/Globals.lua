@@ -31,7 +31,7 @@ _addon.G.BAR_TOOL_BANK = 26
 _addon.G.BAR_TOOL_CROWNS = 27
 _addon.G.BAR_TOOL_CROWN_GEMS = 28
 _addon.G.BAR_TOOL_TELVAR = 29
-
+_addon.G.BAR_TOOL_UNDAUNTED_KEYS = 30
 
 
 _addon.TSetting = function( toolID )
@@ -63,7 +63,8 @@ _addon.TSetting = function( toolID )
 	if toolID == _addon.G.BAR_TOOL_BANK then return _addon:GetOrDefault( "Used / Total", _addon.Settings["bank_setting"] ) end
 	if toolID == _addon.G.BAR_TOOL_CROWNS then return _addon:GetOrDefault( "On", _addon.Settings["crowns_mode"] ) end
 	if toolID == _addon.G.BAR_TOOL_CROWN_GEMS then return _addon:GetOrDefault( "On", _addon.Settings["crowngems_mode"] ) end
-	if toolID == _addon.G.BAR_TOOL_TELVAR then return _addon:GetOrDefault( "On", _addon.Settings["telvar_mode"] ) end	
+	if toolID == _addon.G.BAR_TOOL_TELVAR then return _addon:GetOrDefault( "On", _addon.Settings["telvar_mode"] ) end
+	if toolID == _addon.G.BAR_TOOL_UNDAUNTED_KEYS then return _addon:GetOrDefault( "On", _addon.Settings["undaunted_keys_mode"] ) end
 end
 
 _addon.G.BAR_STR_SHOW_SMITH             = "Dewi's Smithing Research"
