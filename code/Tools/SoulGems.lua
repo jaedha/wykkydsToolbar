@@ -31,7 +31,6 @@ _addon.Feature.Toolbar.GetSoulGems = function()
         end
     end
     if style == "Empty" then retVal = emptyCount end
-	if emptyCount == 0 and regularFullCount == 0 then icon = "/esoui/art/icons/soulgem_001_empty.dds" end
     if useIcon then
         local o = wykkydsToolbar.Tools[_addon.G.BAR_TOOL_GEMS].Control
         if o.Icon == nil then o.Icon = _addon.Feature.Toolbar.MakeSpacerControl( o ); end
