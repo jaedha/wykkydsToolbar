@@ -4,22 +4,34 @@ _addon.Feature.Toolbar.GetSoulGems = function()
     local style = _addon:GetOrDefault( "Empty / Full", _addon.Settings["soulgem_mode"])
     local useIcon = _addon:GetOrDefault( true, _addon.Settings["soulgem_icon"] )
     local useWhiteText = _addon:GetOrDefault( false, _addon.Settings["white_text"] )
-		local toolScale = _addon:GetOrDefault( 100, _addon.Settings["scale"]) / 100
+    local toolScale = _addon:GetOrDefault( 100, _addon.Settings["scale"]) / 100
     local retVal, c = "", {215/255,213/255,205/255,1}
-    local name, icon, icon2, stackCount = "", "", "", 0
-    local myLevel = GetUnitEffectiveLevel("player")
-    local emptyCount, fullCount = 0, 0
-    
-    local fullColor = "00FF00"
-    if useWhiteText then fullColor = "FFFFFF"; end
-    
-    name, icon, stackCount = GetSoulGemInfo(SOUL_GEM_TYPE_EMPTY, myLevel, true); emptyCount = stackCount;
-    name, icon2, stackCount = GetSoulGemInfo(SOUL_GEM_TYPE_FILLED, myLevel, true); fullCount = stackCount;
-    if style == "Empty / Full" then retVal = emptyCount .. " / ".. "|c"..fullColor..fullCount.."|r"
-    elseif style == "Empty" then retVal = emptyCount
-    elseif style == "Full" then retVal = "|c"..fullColor..fullCount.."|r" end
-    if (icon2 ~= "" and icon2 ~= nil) and icon2 ~= "/esoui/art/icons/icon_missing.dds" then icon = icon2 end
-	if emptyCount == 0 and fullCount == 0 then icon = "/esoui/art/icons/soulgem_001_empty.dds" end
+
+    local regularFullColor = "FF66FF"
+    if useWhiteText then regularFullColor = "FFFFFF"; end
+
+    local crownFullColor = "66DDDD"
+    if useWhiteText then crownFullColor = "FFFFFF"; end
+
+    local _, _, emptyCount = GetSoulGemInfo(SOUL_GEM_TYPE_EMPTY, 50, true);
+    local _, icon = GetSoulGemInfo(SOUL_GEM_TYPE_FILLED, 50, true);
+    local regularFullCount = GetItemLinkStacks('|H1:item:33271:31:50:0:0:0:0:0:0:0:0:0:0:0:0:36:0:0:0:0:0|h|h'); -- regular filled soulgems
+    local crownFullCount = GetItemLinkStacks('|H1:item:61080:32:1:0:0:0:0:0:0:0:0:0:0:0:1:36:0:1:0:0:0|h|h'); -- crown soulgems
+    local cumulativeFullCount = regularFullCount + crownFullCount;
+    if style == "Empty / Full" then
+        retVal = emptyCount .. " / " .. "|c" .. regularFullColor .. cumulativeFullCount .. "|r"
+        if crownFullCount ~= 0 then
+            retVal = retVal .. " (|c" .. crownFullColor .. crownFullCount .. "|r)"
+        end
+    end
+    if style == "Full" then
+        retVal = "|c" .. regularFullColor .. cumulativeFullCount .."|r"
+        if crownFullCount ~= 0 then
+            retVal = retVal .. " (|c" .. crownFullColor .. crownFullCount .. "|r)"
+        end
+    end
+    if style == "Empty" then retVal = emptyCount end
+	if emptyCount == 0 and regularFullCount == 0 then icon = "/esoui/art/icons/soulgem_001_empty.dds" end
     if useIcon then
         local o = wykkydsToolbar.Tools[_addon.G.BAR_TOOL_GEMS].Control
         if o.Icon == nil then o.Icon = _addon.Feature.Toolbar.MakeSpacerControl( o ); end
