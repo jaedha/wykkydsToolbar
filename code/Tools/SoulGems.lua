@@ -13,8 +13,8 @@ _addon.Feature.Toolbar.GetSoulGems = function()
     local crownFullColor = "66DDDD"
     if useWhiteText then crownFullColor = "FFFFFF"; end
 
-    local _, _, emptyCount = GetSoulGemInfo(SOUL_GEM_TYPE_EMPTY, 50, true);
     local _, icon = GetSoulGemInfo(SOUL_GEM_TYPE_FILLED, 50, true);
+    local emptyCount = GetItemLinkStacks('|H1:item:33265:30:50:0:0:0:0:0:0:0:0:0:0:0:0:36:0:0:0:0:0|h|h'); -- empty soulgems
     local regularFullCount = GetItemLinkStacks('|H1:item:33271:31:50:0:0:0:0:0:0:0:0:0:0:0:0:36:0:0:0:0:0|h|h'); -- regular filled soulgems
     local crownFullCount = GetItemLinkStacks('|H1:item:61080:32:1:0:0:0:0:0:0:0:0:0:0:0:1:36:0:1:0:0:0|h|h'); -- crown soulgems
     local cumulativeFullCount = regularFullCount + crownFullCount;
