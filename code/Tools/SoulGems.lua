@@ -42,7 +42,7 @@ _addon.Feature.Toolbar.GetSoulGems = function()
             o.Icon:ClearAnchors()
             o.Icon:SetAnchor( RIGHT, o, LEFT, -8, 0 )
             o.Icon:SetHidden(false)
-            local aBool, aPoint, aTarget, aTargetPoint, aX, aY = o:GetAnchor()
+            local _, aPoint, aTarget, aTargetPoint, aX, aY = o:GetAnchor()
             o.PreviousAnchor = {aPoint, aTarget, aTargetPoint, aX, aY}
             o:ClearAnchors()
             o:SetAnchor( aPoint, aTarget, aTargetPoint, aX + o.BufferSize, aY )
