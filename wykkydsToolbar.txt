@@ -1,9 +1,9 @@
 ## Title: Wykkyd Toolbar
 ## Description: Provides an on-screen display of useful, configurable information
 ## Author: Calia1120, Demiknight, jaedha
-## Version: 3.2.7.2
-## APIVersion: 100034
-## DependsOn: LibAddonMenu-2.0 LibStub
+## Version: 3.2.7.4
+## APIVersion: 101034
+## DependsOn: LibAddonMenu-2.0
 ## OptionalDependsOn: wykkyd_core_libraries LibWykkydFactory4
 ## SavedVariables: wykkydsToolbarGlobal
 
