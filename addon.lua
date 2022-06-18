@@ -66,7 +66,6 @@ _addon.wykkydPreferred = {
 	["white_text"] = false,
 	["spacer_style"] = "Dot",
 	["hide_in_dialog"] = true,
---	["undaunted_keys_setting"] = true,
 }
 
 _addon.Feature = {}
@@ -238,10 +237,10 @@ _addon.LoadSettingsMenu = function( self )
 		[17] = { type = "submenu", name = "|cCAB222".."Currencies".."|r",
 			controls = {
 				[1] = self:MakeStandardOption( self.Settings, "Show Identifier", "currency_identifier", "Icon", "dropdown", { choices={"None","Icon","Title"},default="Icon", } ),
-				[2] = self:MakeStandardOption( self.Settings, "Use Commas", "currency_commas", true, "checkbox", { default=true, } ),				
+				[2] = self:MakeStandardOption( self.Settings, "Use Commas", "currency_commas", true, "checkbox", { default=true, } ),
 				[3] = self:MakeStandardOption( self.Settings, "Alliance Points", nil, nil, "header", nil ),
 				[4] = self:MakeStandardOption( self.Settings, "Display Mode", "ap_mode", "On", "dropdown", { choices={"On","Off"},default="On", } ),
-				[5] = self:MakeStandardOption( self.Settings, "Location", "ap_location", "Character", "dropdown", { choices={"Account","Bank","Character"},default="Character", } ),				
+				[5] = self:MakeStandardOption( self.Settings, "Location", "ap_location", "Character", "dropdown", { choices={"Account","Bank","Character"},default="Character", } ),
 				[6] = self:MakeStandardOption( self.Settings, "Crowns", nil, nil, "header", nil ),
 				[7] = self:MakeStandardOption( self.Settings, "Display Mode", "crowns_mode", "On", "dropdown", { choices={"On","Off"},default="On", } ),
 				[8] = self:MakeStandardOption( self.Settings, "Crown Gems", nil, nil, "header", nil ),
@@ -251,12 +250,12 @@ _addon.LoadSettingsMenu = function( self )
 				[12] = self:MakeStandardOption( self.Settings, "Warning Threshold", "eventtickets_warn", 10, "slider", { min=0, max=12, step=1, default=10, } ),
 				[13] = self:MakeStandardOption( self.Settings, "Gold", nil, nil, "header", nil ),
 				[14] = self:MakeStandardOption( self.Settings, "Display Mode", "gold_mode", "On", "dropdown", { choices={"On","Off"},default="On", } ),
-				[15] = self:MakeStandardOption( self.Settings, "Location", "gold_location", "Character", "dropdown", { choices={"Account","Bank","Character"},default="Character", } ),				
+				[15] = self:MakeStandardOption( self.Settings, "Location", "gold_location", "Character", "dropdown", { choices={"Account","Bank","Character"},default="Character", } ),
 				[16] = self:MakeStandardOption( self.Settings, "Soul Gems", nil, nil, "header", nil ),
 				[17] = self:MakeStandardOption( self.Settings, "Display Mode", "soulgem_mode", "Empty / Full", "dropdown", { choices={"Off","Empty / Full","Empty","Full"},default="Empty / Full", } ),
 				[18] = self:MakeStandardOption( self.Settings, "Tel Var Stones", nil, nil, "header", nil ),
 				[19] = self:MakeStandardOption( self.Settings, "Display Mode", "telvar_mode", "On", "dropdown", { choices={"On","Off"},default="On", } ),
-				[20] = self:MakeStandardOption( self.Settings, "Location", "telvar_location", "Character", "dropdown", { choices={"Account","Bank","Character"},default="Character", } ),				
+				[20] = self:MakeStandardOption( self.Settings, "Location", "telvar_location", "Character", "dropdown", { choices={"Account","Bank","Character"},default="Character", } ),
 				[21] = self:MakeStandardOption( self.Settings, "Transmute Crystals", nil, nil, "header", nil ),
 				[22] = self:MakeStandardOption( self.Settings, "Display Mode", "xmute_mode", "Available", "dropdown", { choices={"Off","Available / Max","Available"},default="Available", } ),
 				[23] = self:MakeStandardOption( self.Settings, "Free Spots Left Warning", "xmute_warn", 25, "slider", { min=0, max=100, step=5, default=25, } ),
@@ -302,7 +301,7 @@ _addon.LoadSettingsMenu = function( self )
 	optionsTable[2].setFunc = function( val )
 		self.Settings["hide_in_dialog"] = val
 		_addon:ReloadUI()
-	end	
+	end
 	optionsTable[3].setFunc = function( val ) self.Settings["align_tools"] = val
 		wykkydsToolbar:SetFrameCoords()
 	end
